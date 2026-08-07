@@ -47,15 +47,15 @@ jobs:
         run: |
           # Try common build directories, then fallback to repo root
           python - <<'PY'
-import os,sys,subprocess
-candidates=['build','dist','public']
-for c in candidates:
-    if os.path.isdir(c):
-        print(f"Found build directory: {c}")
-        sys.exit(subprocess.call(['ghp-import','-n','-p','-f',c]))
-print('No common build directory found, deploying repository root')
-sys.exit(subprocess.call(['ghp-import','-n','-p','-f','.']))
-PY
+          import os,sys,subprocess
+          candidates=['build','dist','public']
+          for c in candidates:
+              if os.path.isdir(c):
+                 print(f"Found build directory: {c}")
+                 sys.exit(subprocess.call(['ghp-import','-n','-p','-f',c]))
+                print('No common build directory found, deploying repository root')
+                sys.exit(subprocess.call(['ghp-import','-n','-p','-f','.']))
+          PY
 
       - name: Smoke test deployment locally
         if: always()
