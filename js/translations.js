@@ -1,6 +1,6 @@
 /**
  * ====================================================
- * FeriSmart — Multi-Language (i18n) Translations Data
+ * FertiSmart — Multi-Language (i18n) Translations Data
  * Supports: English ('en'), Hindi ('hi'), Telugu ('te')
  * ====================================================
  */
@@ -16,7 +16,7 @@ const TRANSLATIONS = {
 
     // Hero Section
     hero_badge: "100% Organic & Sustainable",
-    hero_title_prefix: "FeriSmart",
+    hero_title_prefix: "FertiSmart",
     hero_title_suffix: "Smart Liquid Bio-Fertilizer Guide",
     hero_subtitle: "Discover how to prepare powerful homemade liquid bio-fertilizers from kitchen & farm waste. Exact ratios, step-by-step methods, and an interactive batch calculator — all in one place.",
     hero_btn_explore: "Explore Fertilizers",
@@ -100,7 +100,7 @@ const TRANSLATIONS = {
     footer_quick_links: "Quick Links",
     footer_resources: "Resources",
     footer_all_recipes: "All Recipes",
-    footer_copy: "© 2026 FeriSmart – Smart Bio-Fertilizer Guide",
+    footer_copy: "© 2026 FertiSmart – Smart Bio-Fertilizer Guide",
     footer_quote: '"The soil is the great connector of our lives." — Wendell Berry'
   },
 
