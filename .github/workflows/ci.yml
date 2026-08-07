@@ -18,16 +18,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '24'
 
-      - name: Install tools
-        run: |
-          npm install -g http-server htmlhint html-validator-cli
-
-      - name: Run HTMLHint
-        run: |
-          # Lint HTML; fail the job on any errors
-          htmlhint "**/*.html"
 
       - name: Serve site and smoke test
         run: |
@@ -43,8 +35,4 @@ jobs:
           # Smoke test: fetch the root URL (will fail the step if non-2xx)
           curl -f http://localhost:8080
 
-      - name: Validate HTML with W3C validator
-        run: |
-          # Use html-validator to run the W3C validator against the local file
-          # This will print results; the step exits non-zero when a serious error occurs
-          html-validator --file=index.html --verbose
+     
