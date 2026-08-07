@@ -1,0 +1,75 @@
+name: Deploy with Python
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; elif [ -f yarn.lock ]; then yarn install --frozen-lockfile || true; else npm install || true; fi
+
+      - name: Build (if present)
+        run: |
+          # run build script if defined
+          if npm run | grep -q "build"; then npm run build; fi
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install ghp-import
+        run: pip install --upgrade pip ghp-import
+
+      - name: Configure Git for pushing
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+      - name: Deploy to GitHub Pages using ghp-import (Python)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Try common build directories, then fallback to repo root
+          python - <<'PY'
+import os,sys,subprocess
+candidates=['build','dist','public']
+for c in candidates:
+    if os.path.isdir(c):
+        print(f"Found build directory: {c}")
+        sys.exit(subprocess.call(['ghp-import','-n','-p','-f',c]))
+print('No common build directory found, deploying repository root')
+sys.exit(subprocess.call(['ghp-import','-n','-p','-f','.']))
+PY
+
+      - name: Smoke test deployment locally
+        if: always()
+        run: |
+          # Start a simple HTTP server from the detected build dir and curl it to smoke-test
+          DIR=""
+          for d in build dist public .; do
+            if [ -d "$d" ]; then DIR=$d; break; fi
+          done
+          echo "Serving from $DIR"
+          python -m http.server 8000 --directory "$DIR" &
+          pid=$!
+          sleep 2
+          if ! curl -fsS http://localhost:8000/; then
+            echo "Smoke test failed"; kill $pid; exit 1
+          fi
+          kill $pid
