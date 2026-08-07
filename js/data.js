@@ -1,6 +1,6 @@
 /**
  * ====================================================
- * FeriSmart — Bio-Fertilizer Recipe Data Store (Multilingual)
+ * FertiSmart — Bio-Fertilizer Recipe Data Store (Multilingual)
  * Full translation support for English ('en'), Hindi ('hi'), Telugu ('te')
  * ====================================================
  */
@@ -25,7 +25,7 @@ const FERTILIZER_DATA = [
     lang: {
       en: {
         name: "Yeast & Jaggery Bio-Fertilizer",
-        tagline: "FeriSmart prototype — simple, effective microbial powerhouse",
+        tagline: "FertiSmart prototype — simple, effective microbial powerhouse",
         ingredients: [
           { name: "Active Dry Yeast", amount: 10, unit: "g" },
           { name: "Jaggery (Gur)", amount: 100, unit: "g" },
