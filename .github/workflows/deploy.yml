@@ -31,6 +31,8 @@ jobs:
   # Build & Verification job
   build-and-verify:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_NODE_VERSION: 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
