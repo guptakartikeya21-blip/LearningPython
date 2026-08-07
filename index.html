@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>FeriSmart – Smart Liquid Bio-Fertilizer Guide</title>
+  <meta name="description" content="FeriSmart is a free educational platform that teaches farmers, students, and researchers how to prepare homemade liquid bio-fertilizers with exact ingredient ratios, step-by-step methods, and a batch calculator." />
+  <meta name="keywords" content="bio-fertilizer, organic farming, sustainable agriculture, liquid fertilizer, jeevamrutham, panchagavya, yeast jaggery fertilizer, homemade fertilizer" />
+  <meta name="author" content="FeriSmart" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FeriSmart – Smart Liquid Bio-Fertilizer Guide" />
+  <meta property="og:description" content="Learn to make 11+ homemade liquid bio-fertilizers with exact ratios, preparation steps, and an interactive batch calculator." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════
+       FLOATING LEAF DECORATIONS
+       ════════════════════════════════════════════════ -->
+  <div class="leaf-float" aria-hidden="true">🍃</div>
+  <div class="leaf-float" aria-hidden="true">🌿</div>
+  <div class="leaf-float" aria-hidden="true">🍀</div>
+  <div class="leaf-float" aria-hidden="true">🌱</div>
+
+  <!-- ════════════════════════════════════════════════
+       HEADER / NAVIGATION
+       ════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🌱</span>
+        <span>FeriSmart</span>
+      </a>
+
+      <div class="nav-actions">
+        <nav>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
+            <li><a href="#library" data-i18n="nav_library">Library</a></li>
+            <li><a href="#comparison" data-i18n="nav_compare">Compare</a></li>
+            <li><a href="#calculator" data-i18n="nav_calculator">Calculator</a></li>
+          </ul>
+        </nav>
+
+        <!-- Language Switcher Tab -->
+        <div class="lang-selector">
+          <span class="lang-icon">🌐</span>
+          <select id="lang-select" aria-label="Select Language">
+            <option value="en">English</option>
+            <option value="hi">हिंदी (Hindi)</option>
+            <option value="te">తెలుగు (Telugu)</option>
+          </select>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span data-i18n="hero_badge">100% Organic & Sustainable</span>
+          </div>
+
+          <!-- Language Buttons on Home Page -->
+          <div class="lang-pill-selector">
+            <span class="lang-pill-label">🌐 Select Language / भाषा / భాష:</span>
+            <div class="lang-pills" id="home-lang-pills">
+              <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+              <button class="lang-btn" data-lang="hi">🇮🇳 हिंदी</button>
+              <button class="lang-btn" data-lang="te">🇮🇳 తెలుగు</button>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="gradient-text" data-i18n="hero_title_prefix">FeriSmart</span> –<br />
+            <span data-i18n="hero_title_suffix">Smart Liquid Bio-Fertilizer Guide</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Discover how to prepare powerful homemade liquid bio-fertilizers
+            from kitchen &amp; farm waste. Exact ratios, step-by-step methods,
+            and an interactive batch calculator — all in one place.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#library" class="btn btn-primary">
+              <span class="btn-icon">🌿</span> <span data-i18n="hero_btn_explore">Explore Fertilizers</span>
+            </a>
+            <a href="#calculator" class="btn btn-secondary">
+              <span class="btn-icon">🧮</span> <span data-i18n="hero_btn_calc">Batch Calculator</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-value">11+</div>
+              <div class="hero-stat-label" data-i18n="hero_stat_recipes">Recipes</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value" data-i18n="hero_stat_zero">Zero</div>
+              <div class="hero-stat-label" data-i18n="hero_stat_chemicals">Chemicals</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value" data-i18n="hero_stat_always">Free</div>
+              <div class="hero-stat-label" data-i18n="hero_stat_free">Forever</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="hero-visual">
+          <svg class="hero-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-label="Illustration of a bio-fertilizer bottle with plants growing around it">
+            <circle cx="250" cy="250" r="220" fill="#d1fae5" opacity="0.5"/>
+            <circle cx="250" cy="250" r="170" fill="#a7f3d0" opacity="0.4"/>
+            <rect x="190" y="180" width="120" height="200" rx="20" fill="#059669" opacity="0.9"/>
+            <rect x="200" y="190" width="100" height="180" rx="15" fill="#10b981"/>
+            <rect x="220" y="140" width="60" height="50" rx="8" fill="#065f46"/>
+            <rect x="215" y="130" width="70" height="18" rx="9" fill="#047857"/>
+            <rect x="205" y="240" width="90" height="125" rx="12" fill="#fbbf24" opacity="0.7"/>
+            <circle cx="230" cy="300" r="6" fill="#ffffff" opacity="0.6"/>
+            <circle cx="260" cy="280" r="4" fill="#ffffff" opacity="0.5"/>
+            <circle cx="245" cy="320" r="5" fill="#ffffff" opacity="0.4"/>
+            <circle cx="270" cy="310" r="3" fill="#ffffff" opacity="0.6"/>
+            <rect x="210" y="200" width="80" height="30" rx="5" fill="#ffffff" opacity="0.9"/>
+            <text x="250" y="220" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="700" fill="#065f46">FeriSmart</text>
+            <line x1="250" y1="130" x2="250" y2="70" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="235" cy="85" rx="18" ry="10" fill="#34d399" transform="rotate(-30 235 85)"/>
+            <ellipse cx="265" cy="75" rx="18" ry="10" fill="#10b981" transform="rotate(25 265 75)"/>
+            <ellipse cx="250" cy="60" rx="15" ry="9" fill="#6ee7b7" transform="rotate(-5 250 60)"/>
+            <line x1="140" y1="380" x2="160" y2="280" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="145" cy="300" rx="20" ry="10" fill="#34d399" transform="rotate(-50 145 300)"/>
+            <ellipse cx="155" cy="270" rx="16" ry="8" fill="#6ee7b7" transform="rotate(-30 155 270)"/>
+            <line x1="360" y1="380" x2="340" y2="290" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="355" cy="310" rx="20" ry="10" fill="#34d399" transform="rotate(50 355 310)"/>
+            <ellipse cx="345" cy="280" rx="16" ry="8" fill="#6ee7b7" transform="rotate(30 345 280)"/>
+            <ellipse cx="250" cy="395" rx="160" ry="25" fill="#065f46" opacity="0.3"/>
+            <text x="120" y="200" font-size="28" opacity="0.3">🌾</text>
+            <text x="370" y="180" font-size="24" opacity="0.3">🧪</text>
+            <text x="100" y="380" font-size="20" opacity="0.3">🐛</text>
+            <text x="380" y="400" font-size="22" opacity="0.3">💧</text>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       LIBRARY — SEARCH, FILTER, CARDS
+       ════════════════════════════════════════════════ -->
+  <section class="section library" id="library">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2>📚 <span data-i18n="lib_title">Bio-Fertilizer Library</span></h2>
+        <p data-i18n="lib_subtitle">Explore homemade liquid bio-fertilizer recipes with exact ratios, preparation methods, and application guides.</p>
+      </div>
+
+      <!-- Search & Filter bar -->
+      <div class="search-filter-bar fade-in">
+
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search by name, ingredient, or nutrient…" aria-label="Search fertilizers" />
+        </div>
+
+        <!-- Crop filters -->
+        <div class="filter-group" role="group" aria-label="Filter by crop type">
+          <button class="filter-btn" data-filter-type="crop" data-filter-value="Vegetables" data-i18n="lib_filter_vegetables">🥬 Vegetables</button>
+          <button class="filter-btn" data-filter-type="crop" data-filter-value="Fruits" data-i18n="lib_filter_fruits">🍎 Fruits</button>
+          <button class="filter-btn" data-filter-type="crop" data-filter-value="Flowers" data-i18n="lib_filter_flowers">🌸 Flowers</button>
+          <button class="filter-btn" data-filter-type="crop" data-filter-value="Cereals" data-i18n="lib_filter_cereals">🌾 Cereals</button>
+        </div>
+
+        <!-- Nutrient filters -->
+        <div class="filter-group" role="group" aria-label="Filter by nutrient">
+          <button class="filter-btn" data-filter-type="nutrient" data-filter-value="Nitrogen" data-i18n="lib_filter_n">N – Nitrogen</button>
+          <button class="filter-btn" data-filter-type="nutrient" data-filter-value="Phosphorus" data-i18n="lib_filter_p">P – Phosphorus</button>
+          <button class="filter-btn" data-filter-type="nutrient" data-filter-value="Potassium" data-i18n="lib_filter_k">K – Potassium</button>
+          <button class="filter-btn" data-filter-type="nutrient" data-filter-value="Micronutrients" data-i18n="lib_filter_micro">🔬 Micro</button>
+        </div>
+
+        <button class="filter-reset" id="filter-reset" data-i18n="lib_reset">↻ Reset</button>
+        <span class="results-count" id="results-count"></span>
+      </div>
+
+      <!-- Card Grid — populated by JS -->
+      <div class="card-grid" id="card-grid"></div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       COMPARISON TABLE
+       ════════════════════════════════════════════════ -->
+  <section class="section comparison" id="comparison">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2>📊 <span data-i18n="comp_title">Fertilizer Comparison</span></h2>
+        <p data-i18n="comp_subtitle">Compare all recipes side-by-side to find the best fit for your crop and budget.</p>
+      </div>
+
+      <div class="table-wrapper fade-in">
+        <table class="comparison-table" id="comparison-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_fertilizer">Fertilizer</th>
+              <th data-i18n="th_nutrients">Main Nutrients</th>
+              <th data-i18n="th_fermentation">Fermentation</th>
+              <th data-i18n="th_cost">Cost</th>
+              <th data-i18n="th_shelf_life">Shelf Life</th>
+              <th data-i18n="th_crops">Suitable Crops</th>
+              <th data-i18n="th_frequency">Frequency</th>
+            </tr>
+          </thead>
+          <tbody id="comparison-table-body">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+       BATCH CALCULATOR
+       ════════════════════════════════════════════════ -->
+  <section class="section calculator" id="calculator">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2>🧮 <span data-i18n="calc_title">Batch Calculator</span></h2>
+        <p data-i18n="calc_subtitle">Select a recipe and target volume — we'll scale all ingredient quantities for you automatically.</p>
+      </div>
+
+      <div class="calc-container fade-in">
+        <div class="calc-card">
+
+          <div class="calc-inputs">
+            <div class="calc-field">
+              <label for="calc-recipe-select" data-i18n="calc_label_recipe">Choose a Recipe</label>
+              <select id="calc-recipe-select">
+                <option value="" disabled selected data-i18n="calc_select_default">— Select a recipe —</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label for="calc-volume-number" data-i18n="calc_label_volume">Target Volume (Litres)</label>
+              <input type="number" id="calc-volume-number" min="1" max="100" value="5" step="1" />
+            </div>
+          </div>
+
+          <div class="calc-slider-wrap">
+            <label for="calc-volume-slider">
+              <span data-i18n="calc_label_slider">Volume Slider</span>
+              <span id="calc-slider-value">5 L</span>
+            </label>
+            <input type="range" class="calc-slider" id="calc-volume-slider" min="1" max="100" value="5" />
+          </div>
+
+          <!-- Results -->
+          <div class="calc-results">
+            <div class="calc-results-header">
+              <h4 data-i18n="calc_scaled_header">📦 Scaled Ingredients</h4>
+            </div>
+            <div class="calc-results-body" id="calc-results-body">
+              <p style="padding:1rem;color:#9ca3af;text-align:center;" data-i18n="calc_prompt">Select a recipe above to see scaled ingredients.</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary calc-copy-btn" id="calc-copy-btn">
+            <span class="btn-icon">📋</span> <span data-i18n="calc_btn_copy">Copy Recipe Summary</span>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🌱</span>
+            <span>FeriSmart</span>
+          </div>
+          <p data-i18n="footer_desc">
+            An open educational platform dedicated to promoting sustainable agriculture
+            through homemade liquid bio-fertilizers. Empowering farmers, students, and
+            researchers with practical knowledge.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
+          <a href="#home" data-i18n="nav_home">Home</a>
+          <a href="#library" data-i18n="nav_library">Fertilizer Library</a>
+          <a href="#comparison" data-i18n="nav_compare">Compare</a>
+          <a href="#calculator" data-i18n="nav_calculator">Calculator</a>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer_resources">Resources</h4>
+          <a href="#library" data-i18n="footer_all_recipes">All Recipes</a>
+          <a href="#calculator" data-i18n="nav_calculator">Batch Calculator</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copy">&copy; 2026 FeriSmart &ndash; Smart Bio-Fertilizer Guide</span>
+        <span class="eco-quote" data-i18n="footer_quote">"The soil is the great connector of our lives." &mdash; Wendell Berry</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════
+       MODAL OVERLAY (hidden by default)
+       ════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div id="modal-body">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       TOAST NOTIFICATION (hidden by default)
+       ════════════════════════════════════════════════ -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
