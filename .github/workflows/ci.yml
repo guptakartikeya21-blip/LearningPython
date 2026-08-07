@@ -10,6 +10,8 @@ jobs:
   lint-and-serve:
     name: Lint HTML and serve site
     runs-on: windows-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_NODE_VERSION: 'true'
 
     steps:
       - name: Checkout repository
