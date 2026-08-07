@@ -26,6 +26,5 @@ jobs:
         run: |
           start http://localhost:8080/index.html
         shell: cmd
-          curl -f http://localhost:8080
 
      
